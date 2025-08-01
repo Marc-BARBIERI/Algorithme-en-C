@@ -13,6 +13,8 @@ int main(void) {
 }
 */
 
+/*
+
 #include <stdio.h>
 
 
@@ -37,3 +39,52 @@ printf("l'addition des deux nombres est : %d\n",resultat);
 
   return 0;
 }
+*/
+
+/*
+
+  #include <stdio.h>
+
+  //fonction qui retourne le plus grand des deux nombres 
+
+int maximum(int a,int b){
+  if(a > b){
+    return a;
+  }else{
+    return b;
+  }
+}
+
+  int main(void){
+
+int a,b ;
+
+printf("Entrez deux nombres : ");
+scanf("%d %d",&a,&b);
+
+printf("le plus grand nombre est : %d \n",maximum(a,b));
+
+    return 0;
+  }
+
+  */
+
+  #include <stdio.h>
+
+  //calculer la moyenne de 3 notes
+
+  float moyenne(float a,float b, float c){
+    return (a + b + c) / 3;
+  }
+
+  int main(void){
+
+float a,b,c;
+
+printf("entrer trois notes");
+scanf("%f %f %f",&a,&b,&c);
+
+printf("la moyenne des notes est de : %.2f \n",moyenne(a,b,c));
+
+    return 0;
+  }
