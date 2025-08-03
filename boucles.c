@@ -38,7 +38,7 @@ for ( i = 2; i <= 20; i++) {
 return 0;
 }
 */
-
+/*
 #include <stdio.h>
 
 int main(void){
@@ -64,6 +64,56 @@ switch (choix){
     default:
     printf("Choix invalide.\n");
 }
+
+    return 0;
+}
+*/
+
+
+#include <stdio.h>
+
+int main(void){
+int resultat;
+int opération;
+int a,b;
+
+printf("entrer deux nombres\n");
+scanf("%d",&a);
+scanf("%d",&b);
+
+printf("choisissez votre opération\n");
+printf("1.Addition\n");
+printf("2.soustraction\n");
+printf("3.division\n");
+printf("4.multiplication\n");
+scanf("%d",&opération);
+
+switch (opération)
+{
+case 1:
+    resultat = (a+b);
+    printf("Résultat : %d + %d = %d \n",a,b,resultat);
+    break;
+    case 2:
+    resultat = (a-b);
+    printf("Résultat : %d - %d = %d  \n",a,b,resultat);
+    break;
+    case 3:
+     if (b != 0) {
+        resultat = a / b;
+        printf("Résultat : %d / %d = %d\n", a, b, resultat);
+    } else {
+        printf("Erreur : division par zéro !\n");
+    }
+    break;
+    case 4:
+    resultat = (a*b);
+    printf("Résultat : %d * %d = %d \n",a,b,resultat);
+    break;
+    default:
+    printf("Choix invalide.\n");
+}
+
 
     return 0;
 }
