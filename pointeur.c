@@ -76,6 +76,7 @@ int main(void) {
 }
 
 */
+/*
 
 #include <stdio.h>
 #include <string.h>
@@ -126,4 +127,57 @@ int main(void) {
 
     return 0;
 }
+*/
+
+
+#include <stdio.h>
+#include <string.h>
+
+int trouverIndice(char prenoms[5][20],char nom[],int taille) {
+for(int i = 0; i < taille; i++){
+    if(strcmp(prenoms[i],nom)==0){
+       return i;
+    }
+    }
+    return -1;
+}
+
+
+
+int main(void){
+    char nouveauPrenom[10];
+    char nomRecherche[20];
+    int i;
+    char prenoms[5][20] = {
+        "Alice",
+        "Bob",
+        "Clara",
+        "David",
+        "Emma"
+    };
+
+    char nom [20];
+    int index;
+    int taille = 5;
+    
+
+
+    printf("entrer un nom \n");
+    scanf("%s",nom);
+    index = trouverIndice(prenoms,nom,taille);
+    if (index == -1) {
+    printf("Prénom non trouvé.\n");
+    } else {
+    printf("Prénom trouvé à l’indice : %d\n", index);
+    printf("Entrer un nouveau prénom : ");
+    scanf("%s", nouveauPrenom);
+    strcpy(prenoms[index], nouveauPrenom);
+    }
+       for(i = 0; i < taille; i++){
+        printf("%d %s \n",i,prenoms[i]);
+       }
+        return 0;
+
+}
+
 
